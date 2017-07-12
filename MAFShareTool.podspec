@@ -66,7 +66,7 @@ Pod::Spec.new do |s|
 
 
   #  When using multiple platforms
-  # s.ios.deployment_target = "7.0"
+  s.ios.deployment_target = "7.0"
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -104,6 +104,8 @@ Pod::Spec.new do |s|
   # s.resources = "Resources/*.png"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
+  s.resource     = 'MAFShareTool/Tencent/TencentOpenApi_IOS_Bundle.bundle'
+  s.vendored_frameworks = 'MAFShareTool/Tencent/TencentOpenAPI.framework'
 
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
