@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <TencentOpenAPI/TencentOAuth.h>
+#import "MAFShareTool.h"
 
 @interface AppDelegate ()
 
@@ -17,8 +19,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    MAFShareTool *shareTool = [MAFShareTool sharedInstance];
+    [shareTool initTencentSDKWithAppID:@"1105311618"];
     return YES;
 }
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+    return [TencentOAuth HandleOpenURL:url];
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+    return [TencentOAuth HandleOpenURL:url];
+}
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

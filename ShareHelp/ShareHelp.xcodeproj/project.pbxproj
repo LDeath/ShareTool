@@ -15,6 +15,9 @@
 		27CA32191F16F8EA007B3A9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CA32171F16F8EA007B3A9B /* LaunchScreen.storyboard */; };
 		27CA32241F16F8EA007B3A9B /* ShareHelpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CA32231F16F8EA007B3A9B /* ShareHelpTests.m */; };
 		27CA322F1F16F8EA007B3A9B /* ShareHelpUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CA322E1F16F8EA007B3A9B /* ShareHelpUITests.m */; };
+		27CA32471F17066A007B3A9B /* QQShareVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CA32451F17066A007B3A9B /* QQShareVC.m */; };
+		27CA32481F17066A007B3A9B /* QQShareVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CA32461F17066A007B3A9B /* QQShareVC.xib */; };
+		27CA324A1F170C29007B3A9B /* news.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27CA32491F170C29007B3A9B /* news.jpg */; };
 		F3AA3FD92FFB7B4BBF0670BD /* libPods-ShareHelp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABD5351D5F1A2E452518AF4A /* libPods-ShareHelp.a */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +55,10 @@
 		27CA322A1F16F8EA007B3A9B /* ShareHelpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShareHelpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CA322E1F16F8EA007B3A9B /* ShareHelpUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareHelpUITests.m; sourceTree = "<group>"; };
 		27CA32301F16F8EA007B3A9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27CA32441F17066A007B3A9B /* QQShareVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQShareVC.h; sourceTree = "<group>"; };
+		27CA32451F17066A007B3A9B /* QQShareVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQShareVC.m; sourceTree = "<group>"; };
+		27CA32461F17066A007B3A9B /* QQShareVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QQShareVC.xib; sourceTree = "<group>"; };
+		27CA32491F170C29007B3A9B /* news.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = news.jpg; sourceTree = "<group>"; };
 		4D1AA72086EDA34158A29457 /* Pods-ShareHelp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareHelp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShareHelp/Pods-ShareHelp.release.xcconfig"; sourceTree = "<group>"; };
 		68C822314958620D6693E47C /* Pods-ShareHelp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareHelp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShareHelp/Pods-ShareHelp.debug.xcconfig"; sourceTree = "<group>"; };
 		ABD5351D5F1A2E452518AF4A /* libPods-ShareHelp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShareHelp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +124,7 @@
 		27CA32081F16F8EA007B3A9B /* ShareHelp */ = {
 			isa = PBXGroup;
 			children = (
+				27CA32401F170642007B3A9B /* Class */,
 				27CA320C1F16F8EA007B3A9B /* AppDelegate.h */,
 				27CA320D1F16F8EA007B3A9B /* AppDelegate.m */,
 				27CA320F1F16F8EA007B3A9B /* ViewController.h */,
@@ -154,6 +162,41 @@
 				27CA32301F16F8EA007B3A9B /* Info.plist */,
 			);
 			path = ShareHelpUITests;
+			sourceTree = "<group>";
+		};
+		27CA32401F170642007B3A9B /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				27CA32411F170642007B3A9B /* QQShare */,
+				27CA32421F170642007B3A9B /* SinaShare */,
+				27CA32431F170642007B3A9B /* WechatShare */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		27CA32411F170642007B3A9B /* QQShare */ = {
+			isa = PBXGroup;
+			children = (
+				27CA32491F170C29007B3A9B /* news.jpg */,
+				27CA32441F17066A007B3A9B /* QQShareVC.h */,
+				27CA32451F17066A007B3A9B /* QQShareVC.m */,
+				27CA32461F17066A007B3A9B /* QQShareVC.xib */,
+			);
+			path = QQShare;
+			sourceTree = "<group>";
+		};
+		27CA32421F170642007B3A9B /* SinaShare */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SinaShare;
+			sourceTree = "<group>";
+		};
+		27CA32431F170642007B3A9B /* WechatShare */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WechatShare;
 			sourceTree = "<group>";
 		};
 		AE0E082E2757AD4844B2CC27 /* Frameworks */ = {
@@ -276,6 +319,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27CA32481F17066A007B3A9B /* QQShareVC.xib in Resources */,
+				27CA324A1F170C29007B3A9B /* news.jpg in Resources */,
 				27CA32191F16F8EA007B3A9B /* LaunchScreen.storyboard in Resources */,
 				27CA32161F16F8EA007B3A9B /* Assets.xcassets in Resources */,
 				27CA32141F16F8EA007B3A9B /* Main.storyboard in Resources */,
@@ -357,6 +402,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27CA32471F17066A007B3A9B /* QQShareVC.m in Sources */,
 				27CA32111F16F8EA007B3A9B /* ViewController.m in Sources */,
 				27CA320E1F16F8EA007B3A9B /* AppDelegate.m in Sources */,
 				27CA320B1F16F8EA007B3A9B /* main.m in Sources */,

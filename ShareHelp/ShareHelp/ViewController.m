@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "MAFShareTool.h"
+#import "QQShareVC.h"
 
 @interface ViewController ()
 
@@ -17,6 +19,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    
+}
+- (IBAction)clickQQShare:(id)sender {
+    
+    QQShareVC *qqShareVC = [[QQShareVC alloc] init];
+    [self presentViewController:qqShareVC animated:YES completion:nil];
+    
+}
+- (IBAction)clickWechatShare:(id)sender {
+}
+- (IBAction)clickSinaShare:(id)sender {
 }
 
 

@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MAFShareTool"
-  s.version      = "0.0.3"
+  s.version      = "0.0.5"
   s.summary      = "常用分享封装"
 
   # This description is used to generate tags and improve search results.
@@ -86,7 +86,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = 'MAFShareTool/**/*.{h,m}'
+  s.source_files  = 'MAFShareTool/**/MAFShareTool.{h,m}'
 
   s.resource     = 'MAFShareTool/Tencent/TencentOpenApi_IOS_Bundle.bundle'
   s.ios.vendored_frameworks = 'MAFShareTool/Tencent/TencentOpenAPI.framework'
