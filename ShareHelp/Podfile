@@ -1,0 +1,3 @@
+target 'ShareHelp' do
+pod 'MAFShareTool'
+end

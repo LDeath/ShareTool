@@ -1,0 +1,549 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0EFF7D4EDE54AA28326B70A8E600C8CA /* TencentOAuthObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 85A2484A8CC47B035A1C9AA9194F6A3E /* TencentOAuthObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		161E9C06D46825C701071C40B5A8198C /* QQApiInterfaceObject.h in Headers */ = {isa = PBXBuildFile; fileRef = C35FEC77358B044B0B4591C81014379C /* QQApiInterfaceObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2169683DE9B8B952C6E64BCF68E7CF61 /* sdkdef.h in Headers */ = {isa = PBXBuildFile; fileRef = A26DCE2CB144ABB6064C7E2D7DAD4ACC /* sdkdef.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		29B43F202B95F2015FABD243F79D137D /* MAFShareTool-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A0467BE420406D7F1F11BAECFBD3663A /* MAFShareTool-dummy.m */; };
+		2C11961A3719C8C5D2C1F923C849DAEF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCE4364CE1E30D8AF0D7493733CE40A /* CoreGraphics.framework */; };
+		2DCF81FDE18E79FFCC8E4275A8D98366 /* TencentOAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 93BE0EE41D62C8D66987284FAC9AD3DF /* TencentOAuth.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30F997635AF29E14DF89069E416E929F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23C63F08DAAF270A506AC5245A6B1CA9 /* Foundation.framework */; };
+		43F5A9CEDF2D05715AFE30121995867D /* MAFShareTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A19AC99E73894A35CB4147FF9D2BC1 /* MAFShareTool.m */; };
+		46B824E1F1A06E7ADF1A06ADCF4DA917 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30611F04114AE48D9546E2B9EE12E4D /* CoreTelephony.framework */; };
+		6E18FE80EFDC52222AAEE94C8DEE4A9F /* QQApiInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 27D5D007AB5C8F42D61389A4DF327062 /* QQApiInterface.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		72E3B98E1B157B8FC07CB69CF540D7DF /* MAFShareTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 893075BFDE0D4B2DE829074DDFE070FD /* MAFShareTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74E538575381300831CD96E3862B8D00 /* TencentApiInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2C7FB293424EAE9D82592F0D07FDA3 /* TencentApiInterface.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76D47DE0BD75E6EAF13F9321477EFAA4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8D5FCC40FD701EA4B5F6058117FE829 /* Security.framework */; };
+		7C3135461B976364B4A1F5385BC8ED24 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C540A93DA552533750C68400B6B2C16C /* UIKit.framework */; };
+		81223F03C52D556C55C6E7429441B07F /* Pods-ShareHelp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ADD437F212EF3CB24F49B5925FC331 /* Pods-ShareHelp-dummy.m */; };
+		A274354246FFFDF6DC3CEC53537E9422 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A74A1E7AA95ABFD7C7657DE7718B23 /* SystemConfiguration.framework */; };
+		AD02DCDDCEAA9CAACAB5540E0285D105 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23C63F08DAAF270A506AC5245A6B1CA9 /* Foundation.framework */; };
+		DDC0B1F523288AC0FFD1FC91E8A5F025 /* TencentMessageObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 7706CFC104DA8811D9561F4FEA8DEDE3 /* TencentMessageObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5E0424F2833A4D09C3C7CABC96524DE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AFEF21D55F7C3665D6DA3C0C123ACF7F;
+			remoteInfo = MAFShareTool;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		22E9EB38E345C7364F16F90D053DA009 /* MAFShareTool-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MAFShareTool-prefix.pch"; sourceTree = "<group>"; };
+		23C63F08DAAF270A506AC5245A6B1CA9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		27D5D007AB5C8F42D61389A4DF327062 /* QQApiInterface.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QQApiInterface.h; path = MAFShareTool/Tencent/TencentOpenAPI.framework/Headers/QQApiInterface.h; sourceTree = "<group>"; };
+		309CABA6DD18CB38F676C1D6EAA28825 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TencentOpenAPI.framework; path = MAFShareTool/Tencent/TencentOpenAPI.framework; sourceTree = "<group>"; };
+		50ADD437F212EF3CB24F49B5925FC331 /* Pods-ShareHelp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ShareHelp-dummy.m"; sourceTree = "<group>"; };
+		7706CFC104DA8811D9561F4FEA8DEDE3 /* TencentMessageObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TencentMessageObject.h; path = MAFShareTool/Tencent/TencentOpenAPI.framework/Headers/TencentMessageObject.h; sourceTree = "<group>"; };
+		7BA82110380D9A0F14D8E4CEFCD1FCBA /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = TencentOpenApi_IOS_Bundle.bundle; path = MAFShareTool/Tencent/TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
+		82303D7A30937AF20FB836C022E759CC /* Pods-ShareHelp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ShareHelp.release.xcconfig"; sourceTree = "<group>"; };
+		84AE34239E29BC8FAACE706AF7C390E7 /* MAFShareTool.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MAFShareTool.xcconfig; sourceTree = "<group>"; };
+		85A2484A8CC47B035A1C9AA9194F6A3E /* TencentOAuthObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TencentOAuthObject.h; path = MAFShareTool/Tencent/TencentOpenAPI.framework/Headers/TencentOAuthObject.h; sourceTree = "<group>"; };
+		86A19AC99E73894A35CB4147FF9D2BC1 /* MAFShareTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MAFShareTool.m; path = MAFShareTool/MAFShareTool.m; sourceTree = "<group>"; };
+		876C7D20579408F7FDD527BC1B11457F /* Pods-ShareHelp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ShareHelp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		893075BFDE0D4B2DE829074DDFE070FD /* MAFShareTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAFShareTool.h; path = MAFShareTool/MAFShareTool.h; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93BE0EE41D62C8D66987284FAC9AD3DF /* TencentOAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TencentOAuth.h; path = MAFShareTool/Tencent/TencentOpenAPI.framework/Headers/TencentOAuth.h; sourceTree = "<group>"; };
+		A0467BE420406D7F1F11BAECFBD3663A /* MAFShareTool-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MAFShareTool-dummy.m"; sourceTree = "<group>"; };
+		A094ECF74DFB3C2A2386F694530F83B5 /* Pods-ShareHelp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ShareHelp-acknowledgements.plist"; sourceTree = "<group>"; };
+		A26DCE2CB144ABB6064C7E2D7DAD4ACC /* sdkdef.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sdkdef.h; path = MAFShareTool/Tencent/TencentOpenAPI.framework/Headers/sdkdef.h; sourceTree = "<group>"; };
+		AFCE4364CE1E30D8AF0D7493733CE40A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		C05D5B81F55B8C3DDFA6FF926D146919 /* Pods-ShareHelp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ShareHelp-frameworks.sh"; sourceTree = "<group>"; };
+		C30611F04114AE48D9546E2B9EE12E4D /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
+		C35FEC77358B044B0B4591C81014379C /* QQApiInterfaceObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QQApiInterfaceObject.h; path = MAFShareTool/Tencent/TencentOpenAPI.framework/Headers/QQApiInterfaceObject.h; sourceTree = "<group>"; };
+		C540A93DA552533750C68400B6B2C16C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		D40D8759E5F70396DCF1C1318E967940 /* Pods-ShareHelp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ShareHelp-resources.sh"; sourceTree = "<group>"; };
+		D8A74A1E7AA95ABFD7C7657DE7718B23 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		DE7291378648F17C8809E1E934D6C75D /* Pods-ShareHelp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ShareHelp.debug.xcconfig"; sourceTree = "<group>"; };
+		EF2C7FB293424EAE9D82592F0D07FDA3 /* TencentApiInterface.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TencentApiInterface.h; path = MAFShareTool/Tencent/TencentOpenAPI.framework/Headers/TencentApiInterface.h; sourceTree = "<group>"; };
+		F328B814B50923ABC547858FCE0821E3 /* libPods-ShareHelp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-ShareHelp.a"; path = "libPods-ShareHelp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8D5FCC40FD701EA4B5F6058117FE829 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		FECF77C22AA9F19BFAC3ACEBC20B4C04 /* libMAFShareTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMAFShareTool.a; path = libMAFShareTool.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		23D6DA32E9E7CBB742607BE92359EBC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD02DCDDCEAA9CAACAB5540E0285D105 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36CDC1DB646B6567D83CD17EFB3DF5C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C11961A3719C8C5D2C1F923C849DAEF /* CoreGraphics.framework in Frameworks */,
+				46B824E1F1A06E7ADF1A06ADCF4DA917 /* CoreTelephony.framework in Frameworks */,
+				30F997635AF29E14DF89069E416E929F /* Foundation.framework in Frameworks */,
+				76D47DE0BD75E6EAF13F9321477EFAA4 /* Security.framework in Frameworks */,
+				A274354246FFFDF6DC3CEC53537E9422 /* SystemConfiguration.framework in Frameworks */,
+				7C3135461B976364B4A1F5385BC8ED24 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F75DF6C7C5F002280EC53F48E80B587 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				814B61BB1A5553888947F9433BC2E187 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		10AB0DBC87D498A0444A07E8B1C240B9 /* Pods-ShareHelp */ = {
+			isa = PBXGroup;
+			children = (
+				876C7D20579408F7FDD527BC1B11457F /* Pods-ShareHelp-acknowledgements.markdown */,
+				A094ECF74DFB3C2A2386F694530F83B5 /* Pods-ShareHelp-acknowledgements.plist */,
+				50ADD437F212EF3CB24F49B5925FC331 /* Pods-ShareHelp-dummy.m */,
+				C05D5B81F55B8C3DDFA6FF926D146919 /* Pods-ShareHelp-frameworks.sh */,
+				D40D8759E5F70396DCF1C1318E967940 /* Pods-ShareHelp-resources.sh */,
+				DE7291378648F17C8809E1E934D6C75D /* Pods-ShareHelp.debug.xcconfig */,
+				82303D7A30937AF20FB836C022E759CC /* Pods-ShareHelp.release.xcconfig */,
+			);
+			name = "Pods-ShareHelp";
+			path = "Target Support Files/Pods-ShareHelp";
+			sourceTree = "<group>";
+		};
+		3F3E817FE51FBE3A657CA827F4268DE7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				309CABA6DD18CB38F676C1D6EAA28825 /* TencentOpenAPI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6454C8817818AD8BA9EAE27B1C544CD6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7BA82110380D9A0F14D8E4CEFCD1FCBA /* TencentOpenApi_IOS_Bundle.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		7230F1411B80B4BC10EC568E5E8F8929 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FECF77C22AA9F19BFAC3ACEBC20B4C04 /* libMAFShareTool.a */,
+				F328B814B50923ABC547858FCE0821E3 /* libPods-ShareHelp.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				0F75DF6C7C5F002280EC53F48E80B587 /* Frameworks */,
+				834D4AE2DAE807FA7751103B4A13BA31 /* Pods */,
+				7230F1411B80B4BC10EC568E5E8F8929 /* Products */,
+				8A2BA93BC6B46A90E2DABE2517BE2A17 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		814B61BB1A5553888947F9433BC2E187 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				AFCE4364CE1E30D8AF0D7493733CE40A /* CoreGraphics.framework */,
+				C30611F04114AE48D9546E2B9EE12E4D /* CoreTelephony.framework */,
+				23C63F08DAAF270A506AC5245A6B1CA9 /* Foundation.framework */,
+				F8D5FCC40FD701EA4B5F6058117FE829 /* Security.framework */,
+				D8A74A1E7AA95ABFD7C7657DE7718B23 /* SystemConfiguration.framework */,
+				C540A93DA552533750C68400B6B2C16C /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		834D4AE2DAE807FA7751103B4A13BA31 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A85B98A8834A1127D2EB0A8BF7BA00D4 /* MAFShareTool */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8A2BA93BC6B46A90E2DABE2517BE2A17 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				10AB0DBC87D498A0444A07E8B1C240B9 /* Pods-ShareHelp */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		A65493652968A6DC1DF230766ED47EC9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				84AE34239E29BC8FAACE706AF7C390E7 /* MAFShareTool.xcconfig */,
+				A0467BE420406D7F1F11BAECFBD3663A /* MAFShareTool-dummy.m */,
+				22E9EB38E345C7364F16F90D053DA009 /* MAFShareTool-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MAFShareTool";
+			sourceTree = "<group>";
+		};
+		A85B98A8834A1127D2EB0A8BF7BA00D4 /* MAFShareTool */ = {
+			isa = PBXGroup;
+			children = (
+				893075BFDE0D4B2DE829074DDFE070FD /* MAFShareTool.h */,
+				86A19AC99E73894A35CB4147FF9D2BC1 /* MAFShareTool.m */,
+				27D5D007AB5C8F42D61389A4DF327062 /* QQApiInterface.h */,
+				C35FEC77358B044B0B4591C81014379C /* QQApiInterfaceObject.h */,
+				A26DCE2CB144ABB6064C7E2D7DAD4ACC /* sdkdef.h */,
+				EF2C7FB293424EAE9D82592F0D07FDA3 /* TencentApiInterface.h */,
+				7706CFC104DA8811D9561F4FEA8DEDE3 /* TencentMessageObject.h */,
+				93BE0EE41D62C8D66987284FAC9AD3DF /* TencentOAuth.h */,
+				85A2484A8CC47B035A1C9AA9194F6A3E /* TencentOAuthObject.h */,
+				3F3E817FE51FBE3A657CA827F4268DE7 /* Frameworks */,
+				6454C8817818AD8BA9EAE27B1C544CD6 /* Resources */,
+				A65493652968A6DC1DF230766ED47EC9 /* Support Files */,
+			);
+			name = MAFShareTool;
+			path = MAFShareTool;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		69167B3A3BF784575DEE5909586096DF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72E3B98E1B157B8FC07CB69CF540D7DF /* MAFShareTool.h in Headers */,
+				6E18FE80EFDC52222AAEE94C8DEE4A9F /* QQApiInterface.h in Headers */,
+				161E9C06D46825C701071C40B5A8198C /* QQApiInterfaceObject.h in Headers */,
+				2169683DE9B8B952C6E64BCF68E7CF61 /* sdkdef.h in Headers */,
+				74E538575381300831CD96E3862B8D00 /* TencentApiInterface.h in Headers */,
+				DDC0B1F523288AC0FFD1FC91E8A5F025 /* TencentMessageObject.h in Headers */,
+				2DCF81FDE18E79FFCC8E4275A8D98366 /* TencentOAuth.h in Headers */,
+				0EFF7D4EDE54AA28326B70A8E600C8CA /* TencentOAuthObject.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3FC8F8AFC7BC16EB2CC93F63586269DC /* Pods-ShareHelp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D49E6B6E7458F4A1D5733CAA4F940FF /* Build configuration list for PBXNativeTarget "Pods-ShareHelp" */;
+			buildPhases = (
+				EEBB60255BC630164FBDCC9972CC1A6C /* Sources */,
+				23D6DA32E9E7CBB742607BE92359EBC6 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				495236E906D5D8E0DC2505AADB8BE13D /* PBXTargetDependency */,
+			);
+			name = "Pods-ShareHelp";
+			productName = "Pods-ShareHelp";
+			productReference = F328B814B50923ABC547858FCE0821E3 /* libPods-ShareHelp.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		AFEF21D55F7C3665D6DA3C0C123ACF7F /* MAFShareTool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD436B5692F98C92F430DA19C85CAE4C /* Build configuration list for PBXNativeTarget "MAFShareTool" */;
+			buildPhases = (
+				86AA4D57DEF29BCF0B301A68BC3E15D6 /* Sources */,
+				36CDC1DB646B6567D83CD17EFB3DF5C6 /* Frameworks */,
+				69167B3A3BF784575DEE5909586096DF /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MAFShareTool;
+			productName = MAFShareTool;
+			productReference = FECF77C22AA9F19BFAC3ACEBC20B4C04 /* libMAFShareTool.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 7230F1411B80B4BC10EC568E5E8F8929 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AFEF21D55F7C3665D6DA3C0C123ACF7F /* MAFShareTool */,
+				3FC8F8AFC7BC16EB2CC93F63586269DC /* Pods-ShareHelp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		86AA4D57DEF29BCF0B301A68BC3E15D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29B43F202B95F2015FABD243F79D137D /* MAFShareTool-dummy.m in Sources */,
+				43F5A9CEDF2D05715AFE30121995867D /* MAFShareTool.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEBB60255BC630164FBDCC9972CC1A6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81223F03C52D556C55C6E7429441B07F /* Pods-ShareHelp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		495236E906D5D8E0DC2505AADB8BE13D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MAFShareTool;
+			target = AFEF21D55F7C3665D6DA3C0C123ACF7F /* MAFShareTool */;
+			targetProxy = 5E0424F2833A4D09C3C7CABC96524DE5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		23E8E16A70AC52CCC9D78AB3461AA0FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE7291378648F17C8809E1E934D6C75D /* Pods-ShareHelp.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		4B82D537058F5EE017BF7D5E44A59AF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84AE34239E29BC8FAACE706AF7C390E7 /* MAFShareTool.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MAFShareTool/MAFShareTool-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+			};
+			name = Release;
+		};
+		707B86CFB21B645E37109F39754D4051 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7B6B849C66E78D3D514CED15B1FF546A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84AE34239E29BC8FAACE706AF7C390E7 /* MAFShareTool.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MAFShareTool/MAFShareTool-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+			};
+			name = Debug;
+		};
+		A88BB02FE3084E969E50A15741DC15F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82303D7A30937AF20FB836C022E759CC /* Pods-ShareHelp.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		EF26A3C5B6EDA309192C6025F703DE0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF26A3C5B6EDA309192C6025F703DE0A /* Debug */,
+				707B86CFB21B645E37109F39754D4051 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D49E6B6E7458F4A1D5733CAA4F940FF /* Build configuration list for PBXNativeTarget "Pods-ShareHelp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23E8E16A70AC52CCC9D78AB3461AA0FE /* Debug */,
+				A88BB02FE3084E969E50A15741DC15F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD436B5692F98C92F430DA19C85CAE4C /* Build configuration list for PBXNativeTarget "MAFShareTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B6B849C66E78D3D514CED15B1FF546A /* Debug */,
+				4B82D537058F5EE017BF7D5E44A59AF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
