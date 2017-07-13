@@ -91,7 +91,8 @@ Pod::Spec.new do |s|
   s.resource     = 'MAFShareTool/Tencent/TencentOpenApi_IOS_Bundle.bundle'
   s.ios.vendored_frameworks = 'MAFShareTool/Tencent/TencentOpenAPI.framework'
 
-    s.frameworks = 'UIKit','Foundation','Security','SystemConfiguration','CoreGraphics','CoreTelephony'
-    s.libraries = 'z','stdc++','sqlite3','iconv'
+  s.frameworks = 'UIKit','Foundation','Security','SystemConfiguration','CoreGraphics','CoreTelephony'
+  s.libraries = 'z','stdc++','sqlite3','iconv'
+  s.dependency 'WechatOpenSDK'
 
 end
