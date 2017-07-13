@@ -88,7 +88,7 @@ Pod::Spec.new do |s|
 
   s.source_files  = 'MAFShareTool/**/*.{h,m}'
 
-  s.resource     = 'Tencent/TencentOpenApi_IOS_Bundle.bundle'
+  s.resource     = 'MAFShareTool/Tencent/TencentOpenApi_IOS_Bundle.bundle'
   s.ios.vendored_frameworks = 'MAFShareTool/Tencent/TencentOpenAPI.framework'
 
     s.frameworks = 'UIKit','Foundation','Security','SystemConfiguration','CoreGraphics','CoreTelephony'
