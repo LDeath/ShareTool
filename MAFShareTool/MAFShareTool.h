@@ -13,7 +13,7 @@
  0 成功,1 取消授权,2 授权失败,3 没有网络
  */
 typedef void (^LoginBlock)(int status, NSString *accessToken, NSString *openID);
-/**
+/** 
  获取用户信息回调
  0 成功,1 失败
  */

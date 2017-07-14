@@ -9,7 +9,7 @@
 #import "MAFShareTool.h"
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/QQApiInterface.h>
-#import <TencentOpenAPI/sdkdef.h>
+#import <TencentOpenAPI/sdkdef.h> 
 #import <WechatOpenSDK/WXApi.h>
 
 @interface MAFShareTool()<TencentSessionDelegate, TencentLoginDelegate, WXApiDelegate>
