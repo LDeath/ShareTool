@@ -72,10 +72,25 @@ typedef void (^WechatGetInfoBlock)(BOOL isSuccess, NSDictionary *info, NSString 
  */
 - (void)shareQZoneNetMessageWithUrl:(NSURL *)url andTitle:(NSString *)title andDescription:(NSString *)description andPreviewImageUrl:(NSURL *)previewImageUrl;
 #pragma mark 微信
+/**
+ 获取微信授权
+ */
 - (void)wechatLoginWithWechatSecret:(NSString *)secret withGetAuthBlock:(WechatGetAuthInfoBlock )block;
+/**
+ 获取微信授权后用户信息
+ */
 - (void)wechatGetInfoWithAccessToken:(NSString *)accessToken withOpenid:(NSString *)openID withGetInfoBlock:(WechatGetInfoBlock )block;
+/**
+ 分享纯文字,type:0 消息,1 朋友圈
+ */
 - (void)shareWXTextWithText:(NSString *)text withType:(int )type;
+/**
+ 分享图片,thumbImg:缩略图,imgData图片数据,type:0 消息,1 朋友圈
+ */
 - (void)shareWXImageWithThumbImg:(UIImage *)thumbImg withImageData:(NSData *)imgData withType:(int )type;
+/**
+ 分享网页thumberImg:缩略图 url:网址链接 type:0 消息,1 朋友圈
+ */
 - (void)shareWXWebWithTitle:(NSString *)title withDescription:(NSString *)description withThumberImg:(UIImage *)thumberImg withUrl:(NSString *)url withType:(int )type;
 #pragma mark 微博
 #pragma mark 系统回调方法

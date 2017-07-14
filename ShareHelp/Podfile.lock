@@ -1,5 +1,5 @@
 PODS:
-  - MAFShareTool (0.0.6):
+  - MAFShareTool (0.1.0):
     - WechatOpenSDK
   - WechatOpenSDK (1.7.8)
 
@@ -7,7 +7,7 @@ DEPENDENCIES:
   - MAFShareTool
 
 SPEC CHECKSUMS:
-  MAFShareTool: 325557e81294c34fb51d52728614fab8cd29d528
+  MAFShareTool: 898120e0aa7ae610830d73dc2d97c725fcb91151
   WechatOpenSDK: ad1e7be1b66416df847ac50830c798b70c9e365e
 
 PODFILE CHECKSUM: f5bb378b8e01bf37697fe20962d6f5b79eef5298
