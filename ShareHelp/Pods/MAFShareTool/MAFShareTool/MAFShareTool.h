@@ -19,11 +19,18 @@ typedef void (^LoginBlock)(int status, NSString *accessToken, NSString *openID);
  */
 typedef void (^GetInfoBlock)(int status, NSDictionary *info, NSString *erroMsg);
 
+typedef void (^WechatGetAuthInfoBlock)(BOOL isSuccess,NSString *access_token,NSString *refresh_token,NSString *openid,NSString *errmsg);
+typedef void (^WechatGetInfoBlock)(BOOL isSuccess, NSDictionary *info, NSString *errmsg);
+
 @interface MAFShareTool : NSObject
 
 @property (nonatomic, copy) LoginBlock loginBlock;
 
 @property (nonatomic, copy) GetInfoBlock getInfoBlock;
+
+@property (nonatomic, copy) WechatGetAuthInfoBlock wechatAuthBlock;
+
+@property (nonatomic, copy) WechatGetInfoBlock wechatInfoBlock;
 
 + (MAFShareTool *)sharedInstance;
 #pragma mark 初始化SDK
@@ -65,6 +72,14 @@ typedef void (^GetInfoBlock)(int status, NSDictionary *info, NSString *erroMsg);
  */
 - (void)shareQZoneNetMessageWithUrl:(NSURL *)url andTitle:(NSString *)title andDescription:(NSString *)description andPreviewImageUrl:(NSURL *)previewImageUrl;
 #pragma mark 微信
+- (void)wechatLoginWithWechatSecret:(NSString *)secret withGetAuthBlock:(WechatGetAuthInfoBlock )block;
+- (void)wechatGetInfoWithAccessToken:(NSString *)accessToken withOpenid:(NSString *)openID withGetInfoBlock:(WechatGetInfoBlock )block;
+- (void)shareWXTextWithText:(NSString *)text withType:(int )type;
+- (void)shareWXImageWithThumbImg:(UIImage *)thumbImg withImageData:(NSData *)imgData withType:(int )type;
+- (void)shareWXWebWithTitle:(NSString *)title withDescription:(NSString *)description withThumberImg:(UIImage *)thumberImg withUrl:(NSString *)url withType:(int )type;
 #pragma mark 微博
+#pragma mark 系统回调方法
+- (BOOL)HandleOpenURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation;
+- (BOOL)HandleOpenURL:(NSURL *)url;
 
 @end

@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MAFShareTool"
-  s.version      = "0.0.7"
+  s.version      = "0.1.0"
   s.summary      = "常用分享封装"
 
   # This description is used to generate tags and improve search results.
@@ -94,6 +94,6 @@ Pod::Spec.new do |s|
   s.frameworks = 'UIKit','Foundation','Security','SystemConfiguration','CoreGraphics','CoreTelephony'
   s.libraries = 'z','stdc++','sqlite3','iconv'
   s.dependency 'WechatOpenSDK'
-  s.dependency 'WeiboSDK'
+  #s.dependency 'WeiboSDK'
 
 end

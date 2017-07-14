@@ -15,6 +15,9 @@
 @interface MAFShareTool()<TencentSessionDelegate, TencentLoginDelegate, WXApiDelegate>
 
 @property (nonatomic, retain) TencentOAuth *tencentOAuth;
+@property (nonatomic, copy) NSString *wechatCode;
+@property (nonatomic, copy) NSString *wechatAppid;
+@property (nonatomic, copy) NSString *wechatAppSecret;
 
 @end
 
@@ -40,6 +43,7 @@ static id instance = nil;
  初始化微信sdk
  */
 - (void)initWechatSDKWithAppID:(NSString *)appID {
+    self.wechatAppid = appID;
     [WXApi registerApp:appID];
 }
 #pragma mark 腾讯qq
@@ -129,7 +133,7 @@ static id instance = nil;
     
     [self handleSendResult:sent];
 }
-#pragma mark TencentSessionDelegate
+#pragma mark TencentSessionDelegate 腾讯代理
 - (void)tencentDidLogin {
     if (self.tencentOAuth.accessToken && 0 != [self.tencentOAuth.accessToken length])
     {
@@ -236,7 +240,9 @@ static id instance = nil;
     }
 }
 #pragma mark 微信
-- (void)wechatLogin {
+- (void)wechatLoginWithWechatSecret:(NSString *)secret withGetAuthBlock:(WechatGetAuthInfoBlock )block {
+    self.wechatAuthBlock = block;
+    self.wechatAppSecret = secret;
     //构造SendAuthReq结构体
     SendAuthReq* req =[[SendAuthReq alloc ] init];
     req.scope = @"snsapi_userinfo"; //应用授权作用域，如获取用户个人信息则填写snsapi_userinfo
@@ -244,7 +250,125 @@ static id instance = nil;
     //第三方向微信终端发送一个SendAuthReq消息结构
     [WXApi sendReq:req];
 }
+- (void)shareWXTextWithText:(NSString *)text withType:(int )type {
+    SendMessageToWXReq *req = [[SendMessageToWXReq alloc] init];
+    req.text = text;
+    req.bText = YES;
+    req.scene = type;
+    [WXApi sendReq:req];
+}
+- (void)shareWXImageWithThumbImg:(UIImage *)thumbImg withImageData:(NSData *)imgData withType:(int )type {
+    WXMediaMessage *message = [WXMediaMessage message];
+    [message setThumbImage:thumbImg];
+    WXImageObject *imageObject = [WXImageObject object];
+    imageObject.imageData = imgData;
+    message.mediaObject = imageObject;
+    
+    SendMessageToWXReq *req = [[SendMessageToWXReq alloc] init];
+    req.bText = NO;
+    req.message = message;
+    req.scene = type;
+    [WXApi sendReq:req];
+}
+- (void)shareWXWebWithTitle:(NSString *)title withDescription:(NSString *)description withThumberImg:(UIImage *)thumberImg withUrl:(NSString *)url withType:(int )type{
+    WXMediaMessage *message = [WXMediaMessage message];
+    message.title = title;
+    message.description = description;
+    [message setThumbImage:thumberImg];
+    
+    WXWebpageObject *webpageObject = [WXWebpageObject object];
+    webpageObject.webpageUrl = url;
+    message.mediaObject = webpageObject;
+    
+    SendMessageToWXReq *req = [[SendMessageToWXReq alloc] init];
+    req.bText = NO;
+    req.message = message;
+    req.scene = type;
+    
+    [WXApi sendReq:req];
+}
+#pragma mark WXApiDelegate 微信代理
+- (void)onResp:(BaseResp *)resp {
+    if ([resp isKindOfClass:[SendAuthResp class]]) {
+        SendAuthResp *auth = (SendAuthResp *)resp;
+        if ([auth.state isEqualToString:@"123"]) {
+            self.wechatCode = auth.code;
+            [self wechatGetAccessToken];
+        }
+    }
+    NSLog(@"%@",resp);
+}
+#pragma mark wechatNetWrok 微信网络请求
+- (void)wechatGetAccessToken {
+    // 1.根据网址初始化OC字符串对象
+    NSString *urlStr = @"https://api.weixin.qq.com/sns/oauth2/access_token";
+    // 2.创建NSURL对象
+    NSURL *url = [NSURL URLWithString:urlStr];
+    // 3.创建请求
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    // 4.创建参数字符串对象
+    NSString *parmStr = [NSString stringWithFormat:@"appid=%@&secret=%@&code=%@&grant_type=authorization_code",self.wechatAppid,self.wechatAppSecret,self.wechatCode];
+    // 5.将字符串转为NSData对象
+    NSData *pramData = [parmStr dataUsingEncoding:NSUTF8StringEncoding];
+    // 6.设置请求体
+    [request setHTTPBody:pramData];
+    // 7.设置请求方式
+    [request setHTTPMethod:@"POST"];
+    // 创建同步链接
+    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+    if (self.wechatAuthBlock == NULL || self.wechatAuthBlock == nil) {
+        return;
+    }
+    if ([[dic allKeys] containsObject:@"errcode"]) {
+        NSString *err = [NSString stringWithFormat:@"%@:%@",dic[@"errcode"],dic[@"errmsg"]];
+        self.wechatAuthBlock(NO, @"", @"", @"", err);
+    } else {
+        if ([[dic allKeys] containsObject:@"access_token"] && [[dic allKeys] containsObject:@"refresh_token"] && [[dic allKeys] containsObject:@"openid"]) {
+            self.wechatAuthBlock(YES, dic[@"access_token"], dic[@"refresh_token"], dic[@"openid"], @"");
+        } else {
+            self.wechatAuthBlock(NO, @"", @"", @"", @"获取信息不全");
+        }
+    }
+}
+- (void)wechatGetInfoWithAccessToken:(NSString *)accessToken withOpenid:(NSString *)openID withGetInfoBlock:(WechatGetInfoBlock )block {
+    self.wechatInfoBlock = block;
+    // 1.根据网址初始化OC字符串对象
+    NSString *urlStr = @"https://api.weixin.qq.com/sns/userinfo";
+    // 2.创建NSURL对象
+    NSURL *url = [NSURL URLWithString:urlStr];
+    // 3.创建请求
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    // 4.创建参数字符串对象
+    NSString *parmStr = [NSString stringWithFormat:@"access_token=%@&openid=%@",accessToken,openID];
+    // 5.将字符串转为NSData对象
+    NSData *pramData = [parmStr dataUsingEncoding:NSUTF8StringEncoding];
+    // 6.设置请求体
+    [request setHTTPBody:pramData];
+    // 7.设置请求方式
+    [request setHTTPMethod:@"POST"];
+    // 创建同步链接
+    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+    if (self.wechatInfoBlock == NULL || self.wechatInfoBlock == nil) {
+        return;
+    }
+    if ([[dic allKeys] containsObject:@"errcode"]) {
+        NSString *err = [NSString stringWithFormat:@"%@:%@",dic[@"errcode"],dic[@"errmsg"]];
+        self.wechatInfoBlock(NO, @{}, err);
+    } else {
+        self.wechatInfoBlock(YES, dic, @"");
+    }
+}
 #pragma mark 
+- (BOOL)HandleOpenURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    NSString *urlStr = url.absoluteString;
+    if ([urlStr containsString:@"tencent"]) {
+        return [TencentOAuth HandleOpenURL:url];
+    } else {
+        return [WXApi handleOpenURL:url delegate:self];
+    }
+}
 - (BOOL)HandleOpenURL:(NSURL *)url {
     NSString *urlStr = url.absoluteString;
     if ([urlStr containsString:@"tencent"]) {
