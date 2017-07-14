@@ -81,9 +81,11 @@ EOM
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/MAFShareTool/MAFShareTool/Tencent/TencentOpenApi_IOS_Bundle.bundle"
+  install_resource "${PODS_ROOT}/WeiboSDK/libWeiboSDK/WeiboSDK.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/MAFShareTool/MAFShareTool/Tencent/TencentOpenApi_IOS_Bundle.bundle"
+  install_resource "${PODS_ROOT}/WeiboSDK/libWeiboSDK/WeiboSDK.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

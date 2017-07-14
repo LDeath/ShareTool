@@ -30,6 +30,7 @@
     MAFShareTool *shareTool = [MAFShareTool sharedInstance];
     [shareTool initTencentSDKWithAppID:TencentAppID];
     [shareTool initWechatSDKWithAppID:WXAppKey];
+    [shareTool initWeiboSdkWithAppid:WeiBoAppKey];
     return YES;
 }
 

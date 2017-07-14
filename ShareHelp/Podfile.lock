@@ -1,14 +1,17 @@
 PODS:
-  - MAFShareTool (0.1.0):
+  - MAFShareTool (0.1.3):
     - WechatOpenSDK
+    - WeiboSDK
   - WechatOpenSDK (1.7.8)
+  - WeiboSDK (3.1.3)
 
 DEPENDENCIES:
   - MAFShareTool
 
 SPEC CHECKSUMS:
-  MAFShareTool: 898120e0aa7ae610830d73dc2d97c725fcb91151
+  MAFShareTool: 2e4f3d2000796e9f375ebbdd404ac55cfa9cc2a7
   WechatOpenSDK: ad1e7be1b66416df847ac50830c798b70c9e365e
+  WeiboSDK: acb067053668102cf07d01aa7604350162c2e466
 
 PODFILE CHECKSUM: f5bb378b8e01bf37697fe20962d6f5b79eef5298
 

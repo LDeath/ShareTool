@@ -13,7 +13,7 @@
  0 成功,1 取消授权,2 授权失败,3 没有网络
  */
 typedef void (^LoginBlock)(int status, NSString *accessToken, NSString *openID);
-/**
+/** 
  获取用户信息回调
  0 成功,1 失败
  */
@@ -21,6 +21,8 @@ typedef void (^GetInfoBlock)(int status, NSDictionary *info, NSString *erroMsg);
 
 typedef void (^WechatGetAuthInfoBlock)(BOOL isSuccess,NSString *access_token,NSString *refresh_token,NSString *openid,NSString *errmsg);
 typedef void (^WechatGetInfoBlock)(BOOL isSuccess, NSDictionary *info, NSString *errmsg);
+typedef void (^WeiboGetAuthInfoBlock)(BOOL isSuccess,NSDictionary *userInfo,NSDictionary *requestUserInfo);
+typedef void (^WeiboShareBlock)(BOOL isSuccess,NSDictionary *requestUserInfo);
 
 @interface MAFShareTool : NSObject
 
@@ -32,6 +34,10 @@ typedef void (^WechatGetInfoBlock)(BOOL isSuccess, NSDictionary *info, NSString 
 
 @property (nonatomic, copy) WechatGetInfoBlock wechatInfoBlock;
 
+@property (nonatomic, copy) WeiboGetAuthInfoBlock weiboAuthBlock;
+
+@property (nonatomic, copy) WeiboShareBlock weiboShareBlock;
+
 + (MAFShareTool *)sharedInstance;
 #pragma mark 初始化SDK
 /**
@@ -42,6 +48,10 @@ typedef void (^WechatGetInfoBlock)(BOOL isSuccess, NSDictionary *info, NSString 
  初始化微信sdk
  */
 - (void)initWechatSDKWithAppID:(NSString *)appID;
+/**
+ 初始化微博
+ */
+- (void)initWeiboSdkWithAppid:(NSString *)appid;
 #pragma mark 腾讯qq
 /**
  腾讯qq发起授权
@@ -93,6 +103,15 @@ typedef void (^WechatGetInfoBlock)(BOOL isSuccess, NSDictionary *info, NSString 
  */
 - (void)shareWXWebWithTitle:(NSString *)title withDescription:(NSString *)description withThumberImg:(UIImage *)thumberImg withUrl:(NSString *)url withType:(int )type;
 #pragma mark 微博
+- (void)weiboGetAuthWithRedirectUrl:(NSString *)redirectUrl withRequestUserInfo:(NSDictionary *)requestUserInfo withAuthBlock:(WeiboGetAuthInfoBlock )block;
+/**
+ 分享文字,图片
+ */
+- (void)shareWeiboText:(NSString *)text withImageData:(NSData *)imageData withRedirectURL:(NSString *)redirectURL withAccessToken:(NSString *)accessToken withRequestUserInfo:(NSDictionary *)requestUserInfo withShareBlock:(WeiboShareBlock )block;
+/**
+ 分享链接
+ */
+- (void)shareWeiboURLTitle:(NSString *)title withDescription:(NSString *)description withThumbImgData:(NSData *)thumbImgData withUrl:(NSString *)url withRedirectURL:(NSString *)redirectURL withAccessToken:(NSString *)accessToken withRequestUserInfo:(NSDictionary *)requestUserInfo withShareBlock:(WeiboShareBlock )block;
 #pragma mark 系统回调方法
 - (BOOL)HandleOpenURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation;
 - (BOOL)HandleOpenURL:(NSURL *)url;

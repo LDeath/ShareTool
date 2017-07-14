@@ -11,13 +11,13 @@
 		77A8EDF893E56A054973DF0DB5BF16B1 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30611F04114AE48D9546E2B9EE12E4D /* CoreTelephony.framework */; };
 		81223F03C52D556C55C6E7429441B07F /* Pods-ShareHelp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ADD437F212EF3CB24F49B5925FC331 /* Pods-ShareHelp-dummy.m */; };
 		8A1460FBE0A85BCBA71A108F14538180 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCE4364CE1E30D8AF0D7493733CE40A /* CoreGraphics.framework */; };
-		9A20252ED935C319074FEE7B04BCA2DC /* MAFShareTool-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F379643A541892E0EAE5294A57AEF2AB /* MAFShareTool-dummy.m */; };
+		9A20252ED935C319074FEE7B04BCA2DC /* MAFShareTool-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 964831C9D387C31E8D5BFDD3331A6318 /* MAFShareTool-dummy.m */; };
 		AD02DCDDCEAA9CAACAB5540E0285D105 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23C63F08DAAF270A506AC5245A6B1CA9 /* Foundation.framework */; };
-		BCDC002D6AA3030DB225B0E47D57483D /* MAFShareTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC10A272B54784E4C34714FD3A6F202 /* MAFShareTool.m */; };
+		BCDC002D6AA3030DB225B0E47D57483D /* MAFShareTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B254B861F3B91EADBB77FB57C10E82 /* MAFShareTool.m */; };
 		D29531FF25BAFAC62FED2E60F1C40D5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23C63F08DAAF270A506AC5245A6B1CA9 /* Foundation.framework */; };
 		E7F27B334968B3101A7721C747FE1B9E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C540A93DA552533750C68400B6B2C16C /* UIKit.framework */; };
 		EA3AA721FA205C8FA4F1225512173828 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A74A1E7AA95ABFD7C7657DE7718B23 /* SystemConfiguration.framework */; };
-		ED33FCC91F73ACEA5B81B91F98411D82 /* MAFShareTool.h in Headers */ = {isa = PBXBuildFile; fileRef = E336FC5AABE7B838C0F4AEDE4CAA9A28 /* MAFShareTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED33FCC91F73ACEA5B81B91F98411D82 /* MAFShareTool.h in Headers */ = {isa = PBXBuildFile; fileRef = BBAB1D44F04F1273A0EBF92C6403FD84 /* MAFShareTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,32 +31,44 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02685106C1103ACC97E66A596B0ACDF8 /* WeiboUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WeiboUser.h; path = libWeiboSDK/WeiboUser.h; sourceTree = "<group>"; };
+		09EFD4965B090724DB34E6FC9D9B0EFE /* WeiboSDK.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = WeiboSDK.bundle; path = libWeiboSDK/WeiboSDK.bundle; sourceTree = "<group>"; };
+		0CDD73333AD5185ACE47C004356DF451 /* WBHttpRequest+WeiboShare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "WBHttpRequest+WeiboShare.h"; path = "libWeiboSDK/WBHttpRequest+WeiboShare.h"; sourceTree = "<group>"; };
+		1BADED3EF21E8A082040527E45A9D224 /* WXApi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXApi.h; path = OpenSDK1.7.8/WXApi.h; sourceTree = "<group>"; };
 		23C63F08DAAF270A506AC5245A6B1CA9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3840907A8D82A2A01ECACBAA0523AC06 /* WechatAuthSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WechatAuthSDK.h; path = OpenSDK1.7.8/WechatAuthSDK.h; sourceTree = "<group>"; };
-		44504B2C6C5B9C31A61A9BD01491FF8E /* MAFShareTool.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MAFShareTool.xcconfig; sourceTree = "<group>"; };
+		29BD6813523D2AE4AFF9A6339DB54799 /* WBHttpRequest+WeiboToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "WBHttpRequest+WeiboToken.h"; path = "libWeiboSDK/WBHttpRequest+WeiboToken.h"; sourceTree = "<group>"; };
 		50ADD437F212EF3CB24F49B5925FC331 /* Pods-ShareHelp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ShareHelp-dummy.m"; sourceTree = "<group>"; };
-		6373C799AB838E1E45B5CC6D3949A22E /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TencentOpenAPI.framework; path = MAFShareTool/Tencent/TencentOpenAPI.framework; sourceTree = "<group>"; };
-		7BF8B6ACB830CA8C18AFA033C65238E2 /* WXApiObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXApiObject.h; path = OpenSDK1.7.8/WXApiObject.h; sourceTree = "<group>"; };
+		6348C1533071DB3CEB10F94B4108F768 /* WechatAuthSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WechatAuthSDK.h; path = OpenSDK1.7.8/WechatAuthSDK.h; sourceTree = "<group>"; };
+		6790D79F65D531E6E9EB4593E4487F6B /* libWeChatSDK.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libWeChatSDK.a; path = OpenSDK1.7.8/libWeChatSDK.a; sourceTree = "<group>"; };
 		82303D7A30937AF20FB836C022E759CC /* Pods-ShareHelp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ShareHelp.release.xcconfig"; sourceTree = "<group>"; };
 		876C7D20579408F7FDD527BC1B11457F /* Pods-ShareHelp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ShareHelp-acknowledgements.markdown"; sourceTree = "<group>"; };
-		8A58DBBEBC27D9D01AF8D889FD528F0F /* WXApi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXApi.h; path = OpenSDK1.7.8/WXApi.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93B254B861F3B91EADBB77FB57C10E82 /* MAFShareTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MAFShareTool.m; path = MAFShareTool/MAFShareTool.m; sourceTree = "<group>"; };
+		964831C9D387C31E8D5BFDD3331A6318 /* MAFShareTool-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MAFShareTool-dummy.m"; sourceTree = "<group>"; };
+		98CC184CFD948D77263CB198386D215F /* WXApiObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXApiObject.h; path = OpenSDK1.7.8/WXApiObject.h; sourceTree = "<group>"; };
+		9A4C8F3DD6970518B2A82B6DC66D507C /* MAFShareTool.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MAFShareTool.xcconfig; sourceTree = "<group>"; };
+		9FDBC1540CD8F4310084B7D13EDB1F33 /* WeiboSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WeiboSDK.h; path = libWeiboSDK/WeiboSDK.h; sourceTree = "<group>"; };
 		A094ECF74DFB3C2A2386F694530F83B5 /* Pods-ShareHelp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ShareHelp-acknowledgements.plist"; sourceTree = "<group>"; };
 		AFCE4364CE1E30D8AF0D7493733CE40A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		B95A8948A29CA5B2F81FD5E30E07A007 /* MAFShareTool-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MAFShareTool-prefix.pch"; sourceTree = "<group>"; };
+		BBAB1D44F04F1273A0EBF92C6403FD84 /* MAFShareTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAFShareTool.h; path = MAFShareTool/MAFShareTool.h; sourceTree = "<group>"; };
+		BD251EA6B90E84E65850E0100210DBC2 /* WBHttpRequest+WeiboGame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "WBHttpRequest+WeiboGame.h"; path = "libWeiboSDK/WBHttpRequest+WeiboGame.h"; sourceTree = "<group>"; };
+		BE1AA5D8B8228887E582B2EDAEFDF9C4 /* WBSDKBasicButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WBSDKBasicButton.h; path = libWeiboSDK/WBSDKBasicButton.h; sourceTree = "<group>"; };
 		C05D5B81F55B8C3DDFA6FF926D146919 /* Pods-ShareHelp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ShareHelp-frameworks.sh"; sourceTree = "<group>"; };
 		C30611F04114AE48D9546E2B9EE12E4D /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
+		C44672EE610F78DE765007E67BD4B832 /* MAFShareTool-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MAFShareTool-prefix.pch"; sourceTree = "<group>"; };
 		C540A93DA552533750C68400B6B2C16C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		CD02AC0AFE83F8B9899253982CAC9F4F /* WBSDKCommentButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WBSDKCommentButton.h; path = libWeiboSDK/WBSDKCommentButton.h; sourceTree = "<group>"; };
+		D2DEF60AECD6463DA8AB97178DF0FBF7 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TencentOpenAPI.framework; path = MAFShareTool/Tencent/TencentOpenAPI.framework; sourceTree = "<group>"; };
+		D2E1469876228FF7E42F55A9FFF9E51B /* WBSDKRelationshipButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WBSDKRelationshipButton.h; path = libWeiboSDK/WBSDKRelationshipButton.h; sourceTree = "<group>"; };
 		D40D8759E5F70396DCF1C1318E967940 /* Pods-ShareHelp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ShareHelp-resources.sh"; sourceTree = "<group>"; };
 		D8A74A1E7AA95ABFD7C7657DE7718B23 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		DAA41D335AC13EBB9CCA4B2D9789E6C7 /* WBHttpRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WBHttpRequest.h; path = libWeiboSDK/WBHttpRequest.h; sourceTree = "<group>"; };
 		DE7291378648F17C8809E1E934D6C75D /* Pods-ShareHelp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ShareHelp.debug.xcconfig"; sourceTree = "<group>"; };
-		E336FC5AABE7B838C0F4AEDE4CAA9A28 /* MAFShareTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAFShareTool.h; path = MAFShareTool/MAFShareTool.h; sourceTree = "<group>"; };
-		EEC10A272B54784E4C34714FD3A6F202 /* MAFShareTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MAFShareTool.m; path = MAFShareTool/MAFShareTool.m; sourceTree = "<group>"; };
-		F076D03D2969D7C37C225B753CCCEEED /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = TencentOpenApi_IOS_Bundle.bundle; path = MAFShareTool/Tencent/TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
+		E4F9717A08D62EAE96E5634577E8DD64 /* libWeiboSDK.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libWeiboSDK.a; path = libWeiboSDK/libWeiboSDK.a; sourceTree = "<group>"; };
+		EB585FE0C51050ECA1810AEA69B3AEA2 /* WBHttpRequest+WeiboUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "WBHttpRequest+WeiboUser.h"; path = "libWeiboSDK/WBHttpRequest+WeiboUser.h"; sourceTree = "<group>"; };
+		F1AB3D9137881BA004E522C054B9BC24 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = TencentOpenApi_IOS_Bundle.bundle; path = MAFShareTool/Tencent/TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
 		F328B814B50923ABC547858FCE0821E3 /* libPods-ShareHelp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-ShareHelp.a"; path = "libPods-ShareHelp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F379643A541892E0EAE5294A57AEF2AB /* MAFShareTool-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MAFShareTool-dummy.m"; sourceTree = "<group>"; };
 		F8D5FCC40FD701EA4B5F6058117FE829 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
-		FDEA5E70849AF390CC71B124AC07C301 /* libWeChatSDK.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libWeChatSDK.a; path = OpenSDK1.7.8/libWeChatSDK.a; sourceTree = "<group>"; };
 		FECF77C22AA9F19BFAC3ACEBC20B4C04 /* libMAFShareTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMAFShareTool.a; path = libMAFShareTool.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -85,6 +97,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0498888459F804824CA8200F2DE5B6DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4F9717A08D62EAE96E5634577E8DD64 /* libWeiboSDK.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0F75DF6C7C5F002280EC53F48E80B587 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,53 +128,51 @@
 			path = "Target Support Files/Pods-ShareHelp";
 			sourceTree = "<group>";
 		};
-		11B742EF8490FA0CFD6DA391C5701DE2 /* WechatOpenSDK */ = {
+		2B18792CE818B86A7DAE5E5C0B24402B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3840907A8D82A2A01ECACBAA0523AC06 /* WechatAuthSDK.h */,
-				8A58DBBEBC27D9D01AF8D889FD528F0F /* WXApi.h */,
-				7BF8B6ACB830CA8C18AFA033C65238E2 /* WXApiObject.h */,
-				6CFF42F7C03B384D40111A0898A5307F /* Frameworks */,
-			);
-			name = WechatOpenSDK;
-			path = WechatOpenSDK;
-			sourceTree = "<group>";
-		};
-		1E2A2B67B6C77CC18322A9DCF4D9E8C3 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				F076D03D2969D7C37C225B753CCCEEED /* TencentOpenApi_IOS_Bundle.bundle */,
+				09EFD4965B090724DB34E6FC9D9B0EFE /* WeiboSDK.bundle */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		1EF1B3346BA2810913DE710C181FFDA2 /* Frameworks */ = {
+		2D0CB602FDAF61C47209079DB4B62A09 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6373C799AB838E1E45B5CC6D3949A22E /* TencentOpenAPI.framework */,
+				F1AB3D9137881BA004E522C054B9BC24 /* TencentOpenApi_IOS_Bundle.bundle */,
 			);
-			name = Frameworks;
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		64CEA443C771BE7A40D1CFB19F2CFA94 /* MAFShareTool */ = {
+		4C7467E6059D46001F8A11DB2B524947 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E336FC5AABE7B838C0F4AEDE4CAA9A28 /* MAFShareTool.h */,
-				EEC10A272B54784E4C34714FD3A6F202 /* MAFShareTool.m */,
-				1EF1B3346BA2810913DE710C181FFDA2 /* Frameworks */,
-				1E2A2B67B6C77CC18322A9DCF4D9E8C3 /* Resources */,
-				B67D2FA44E2999FF49BF25448BC1CF7C /* Support Files */,
+				9A4C8F3DD6970518B2A82B6DC66D507C /* MAFShareTool.xcconfig */,
+				964831C9D387C31E8D5BFDD3331A6318 /* MAFShareTool-dummy.m */,
+				C44672EE610F78DE765007E67BD4B832 /* MAFShareTool-prefix.pch */,
 			);
-			name = MAFShareTool;
-			path = MAFShareTool;
+			name = "Support Files";
+			path = "../Target Support Files/MAFShareTool";
 			sourceTree = "<group>";
 		};
-		6CFF42F7C03B384D40111A0898A5307F /* Frameworks */ = {
+		50DC6747BAD79113CFC494F261520E40 /* WeiboSDK */ = {
 			isa = PBXGroup;
 			children = (
-				FDEA5E70849AF390CC71B124AC07C301 /* libWeChatSDK.a */,
+				DAA41D335AC13EBB9CCA4B2D9789E6C7 /* WBHttpRequest.h */,
+				BD251EA6B90E84E65850E0100210DBC2 /* WBHttpRequest+WeiboGame.h */,
+				0CDD73333AD5185ACE47C004356DF451 /* WBHttpRequest+WeiboShare.h */,
+				29BD6813523D2AE4AFF9A6339DB54799 /* WBHttpRequest+WeiboToken.h */,
+				EB585FE0C51050ECA1810AEA69B3AEA2 /* WBHttpRequest+WeiboUser.h */,
+				BE1AA5D8B8228887E582B2EDAEFDF9C4 /* WBSDKBasicButton.h */,
+				CD02AC0AFE83F8B9899253982CAC9F4F /* WBSDKCommentButton.h */,
+				D2E1469876228FF7E42F55A9FFF9E51B /* WBSDKRelationshipButton.h */,
+				9FDBC1540CD8F4310084B7D13EDB1F33 /* WeiboSDK.h */,
+				02685106C1103ACC97E66A596B0ACDF8 /* WeiboUser.h */,
+				0498888459F804824CA8200F2DE5B6DD /* Frameworks */,
+				2B18792CE818B86A7DAE5E5C0B24402B /* Resources */,
 			);
-			name = Frameworks;
+			name = WeiboSDK;
+			path = WeiboSDK;
 			sourceTree = "<group>";
 		};
 		7230F1411B80B4BC10EC568E5E8F8929 /* Products */ = {
@@ -171,7 +189,7 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				0F75DF6C7C5F002280EC53F48E80B587 /* Frameworks */,
-				8E7E165A21C79CC9359F8FE2B8982699 /* Pods */,
+				91C792D0EDF3152F44483272949EF737 /* Pods */,
 				7230F1411B80B4BC10EC568E5E8F8929 /* Products */,
 				8A2BA93BC6B46A90E2DABE2517BE2A17 /* Targets Support Files */,
 			);
@@ -198,24 +216,55 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		8E7E165A21C79CC9359F8FE2B8982699 /* Pods */ = {
+		91C792D0EDF3152F44483272949EF737 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				64CEA443C771BE7A40D1CFB19F2CFA94 /* MAFShareTool */,
-				11B742EF8490FA0CFD6DA391C5701DE2 /* WechatOpenSDK */,
+				FA1DF953B463F1E1022FD4A3F8663203 /* MAFShareTool */,
+				A80C2425DBBA4D30151D48AEF42242D6 /* WechatOpenSDK */,
+				50DC6747BAD79113CFC494F261520E40 /* WeiboSDK */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		B67D2FA44E2999FF49BF25448BC1CF7C /* Support Files */ = {
+		98F0834C76D78F5D7F4BF7F84A2C13B5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				44504B2C6C5B9C31A61A9BD01491FF8E /* MAFShareTool.xcconfig */,
-				F379643A541892E0EAE5294A57AEF2AB /* MAFShareTool-dummy.m */,
-				B95A8948A29CA5B2F81FD5E30E07A007 /* MAFShareTool-prefix.pch */,
+				6790D79F65D531E6E9EB4593E4487F6B /* libWeChatSDK.a */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/MAFShareTool";
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A80C2425DBBA4D30151D48AEF42242D6 /* WechatOpenSDK */ = {
+			isa = PBXGroup;
+			children = (
+				6348C1533071DB3CEB10F94B4108F768 /* WechatAuthSDK.h */,
+				1BADED3EF21E8A082040527E45A9D224 /* WXApi.h */,
+				98CC184CFD948D77263CB198386D215F /* WXApiObject.h */,
+				98F0834C76D78F5D7F4BF7F84A2C13B5 /* Frameworks */,
+			);
+			name = WechatOpenSDK;
+			path = WechatOpenSDK;
+			sourceTree = "<group>";
+		};
+		C5FC3B2E9B8CAD8D4CCB562968C0AFA2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2DEF60AECD6463DA8AB97178DF0FBF7 /* TencentOpenAPI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA1DF953B463F1E1022FD4A3F8663203 /* MAFShareTool */ = {
+			isa = PBXGroup;
+			children = (
+				BBAB1D44F04F1273A0EBF92C6403FD84 /* MAFShareTool.h */,
+				93B254B861F3B91EADBB77FB57C10E82 /* MAFShareTool.m */,
+				C5FC3B2E9B8CAD8D4CCB562968C0AFA2 /* Frameworks */,
+				2D0CB602FDAF61C47209079DB4B62A09 /* Resources */,
+				4C7467E6059D46001F8A11DB2B524947 /* Support Files */,
+			);
+			name = MAFShareTool;
+			path = MAFShareTool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,7 +374,7 @@
 /* Begin XCBuildConfiguration section */
 		19D60E2B2E3E63CFDD0E42C591A09B1E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 44504B2C6C5B9C31A61A9BD01491FF8E /* MAFShareTool.xcconfig */;
+			baseConfigurationReference = 9A4C8F3DD6970518B2A82B6DC66D507C /* MAFShareTool.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -488,7 +537,7 @@
 		};
 		EF49FE35C78187F27DFD3707486E9391 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 44504B2C6C5B9C31A61A9BD01491FF8E /* MAFShareTool.xcconfig */;
+			baseConfigurationReference = 9A4C8F3DD6970518B2A82B6DC66D507C /* MAFShareTool.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";

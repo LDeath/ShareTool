@@ -1,9 +1,9 @@
 FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/MAFShareTool/MAFShareTool/Tencent"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/MAFShareTool" "${PODS_ROOT}/Headers/Public/WechatOpenSDK"
-LIBRARY_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/MAFShareTool" "${PODS_ROOT}/WechatOpenSDK/OpenSDK1.7.8"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/MAFShareTool" -isystem "${PODS_ROOT}/Headers/Public/WechatOpenSDK"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"MAFShareTool" -l"WeChatSDK" -l"c++" -l"iconv" -l"sqlite3" -l"sqlite3.0" -l"stdc++" -l"z" -framework "CFNetwork" -framework "CoreGraphics" -framework "CoreTelephony" -framework "Foundation" -framework "Security" -framework "SystemConfiguration" -framework "TencentOpenAPI" -framework "UIKit"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/MAFShareTool" "${PODS_ROOT}/Headers/Public/WechatOpenSDK" "${PODS_ROOT}/Headers/Public/WeiboSDK"
+LIBRARY_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/MAFShareTool" "${PODS_ROOT}/WechatOpenSDK/OpenSDK1.7.8" "${PODS_ROOT}/WeiboSDK/libWeiboSDK"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/MAFShareTool" -isystem "${PODS_ROOT}/Headers/Public/WechatOpenSDK" -isystem "${PODS_ROOT}/Headers/Public/WeiboSDK"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"MAFShareTool" -l"WeChatSDK" -l"WeiboSDK" -l"c++" -l"iconv" -l"sqlite3" -l"sqlite3.0" -l"stdc++" -l"z" -framework "CFNetwork" -framework "CoreGraphics" -framework "CoreTelephony" -framework "CoreText" -framework "Foundation" -framework "ImageIO" -framework "QuartzCore" -framework "Security" -framework "SystemConfiguration" -framework "TencentOpenAPI" -framework "UIKit"
 PODS_BUILD_DIR = $BUILD_DIR
 PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.

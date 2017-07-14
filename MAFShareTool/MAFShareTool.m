@@ -11,8 +11,9 @@
 #import <TencentOpenAPI/QQApiInterface.h>
 #import <TencentOpenAPI/sdkdef.h> 
 #import <WechatOpenSDK/WXApi.h>
+#import <WeiboSDK/WeiboSDK.h>
 
-@interface MAFShareTool()<TencentSessionDelegate, TencentLoginDelegate, WXApiDelegate>
+@interface MAFShareTool()<TencentSessionDelegate, TencentLoginDelegate, WXApiDelegate, WeiboSDKDelegate>
 
 @property (nonatomic, retain) TencentOAuth *tencentOAuth;
 @property (nonatomic, copy) NSString *wechatCode;
@@ -45,6 +46,13 @@ static id instance = nil;
 - (void)initWechatSDKWithAppID:(NSString *)appID {
     self.wechatAppid = appID;
     [WXApi registerApp:appID];
+}
+/**
+ 初始化微博
+ */
+- (void)initWeiboSdkWithAppid:(NSString *)appid {
+    [WeiboSDK enableDebugMode:YES];
+    [WeiboSDK registerApp:appid];
 }
 #pragma mark 腾讯qq
 /**
@@ -240,6 +248,9 @@ static id instance = nil;
     }
 }
 #pragma mark 微信
+/**
+ 获取微信授权
+ */
 - (void)wechatLoginWithWechatSecret:(NSString *)secret withGetAuthBlock:(WechatGetAuthInfoBlock )block {
     self.wechatAuthBlock = block;
     self.wechatAppSecret = secret;
@@ -250,6 +261,9 @@ static id instance = nil;
     //第三方向微信终端发送一个SendAuthReq消息结构
     [WXApi sendReq:req];
 }
+/**
+ 分享纯文字,type:0 消息,1 朋友圈
+ */
 - (void)shareWXTextWithText:(NSString *)text withType:(int )type {
     SendMessageToWXReq *req = [[SendMessageToWXReq alloc] init];
     req.text = text;
@@ -257,6 +271,9 @@ static id instance = nil;
     req.scene = type;
     [WXApi sendReq:req];
 }
+/**
+ 分享图片,thumbImg:缩略图,imgData图片数据,type:0 消息,1 朋友圈
+ */
 - (void)shareWXImageWithThumbImg:(UIImage *)thumbImg withImageData:(NSData *)imgData withType:(int )type {
     WXMediaMessage *message = [WXMediaMessage message];
     [message setThumbImage:thumbImg];
@@ -270,6 +287,9 @@ static id instance = nil;
     req.scene = type;
     [WXApi sendReq:req];
 }
+/**
+ 分享网页thumberImg:缩略图 url:网址链接 type:0 消息,1 朋友圈
+ */
 - (void)shareWXWebWithTitle:(NSString *)title withDescription:(NSString *)description withThumberImg:(UIImage *)thumberImg withUrl:(NSString *)url withType:(int )type{
     WXMediaMessage *message = [WXMediaMessage message];
     message.title = title;
@@ -331,6 +351,9 @@ static id instance = nil;
         }
     }
 }
+/**
+ 获取微信授权后用户信息
+ */
 - (void)wechatGetInfoWithAccessToken:(NSString *)accessToken withOpenid:(NSString *)openID withGetInfoBlock:(WechatGetInfoBlock )block {
     self.wechatInfoBlock = block;
     // 1.根据网址初始化OC字符串对象
@@ -360,21 +383,120 @@ static id instance = nil;
         self.wechatInfoBlock(YES, dic, @"");
     }
 }
-#pragma mark 
+#pragma mark 微博
+- (void)weiboGetAuthWithRedirectUrl:(NSString *)redirectUrl withRequestUserInfo:(NSDictionary *)requestUserInfo withAuthBlock:(WeiboGetAuthInfoBlock )block{
+    self.weiboAuthBlock = block;
+    WBAuthorizeRequest *request = [WBAuthorizeRequest request];
+    request.redirectURI = redirectUrl;
+    request.scope = @"all";
+    request.userInfo = requestUserInfo;
+    [WeiboSDK sendRequest:request];
+}
+/**
+ 分享文字,图片
+ */
+- (void)shareWeiboText:(NSString *)text withImageData:(NSData *)imageData withRedirectURL:(NSString *)redirectURL withAccessToken:(NSString *)accessToken withRequestUserInfo:(NSDictionary *)requestUserInfo withShareBlock:(WeiboShareBlock )block {
+    self.weiboShareBlock = block;
+    WBMessageObject *message = [WBMessageObject message];
+    if (text != nil && ![text isEqualToString:@""]) {
+        message.text = text;
+    }
+    if (imageData != nil) {
+        message.imageObject = [self getMessageImg:imageData];
+    }
+    
+    WBAuthorizeRequest *authRequest = [WBAuthorizeRequest request];
+    authRequest.redirectURI = redirectURL;
+    authRequest.scope = @"all";
+    
+    WBSendMessageToWeiboRequest *request = [WBSendMessageToWeiboRequest requestWithMessage:message authInfo:authRequest access_token:accessToken];
+    request.userInfo = requestUserInfo;
+    [WeiboSDK sendRequest:request];
+}
+/**
+ 分享文字,链接
+ */
+- (void)shareWeiboURLTitle:(NSString *)title withDescription:(NSString *)description withThumbImgData:(NSData *)thumbImgData withUrl:(NSString *)url withRedirectURL:(NSString *)redirectURL withAccessToken:(NSString *)accessToken withRequestUserInfo:(NSDictionary *)requestUserInfo withShareBlock:(WeiboShareBlock )block {
+    self.weiboShareBlock = block;
+    WBMessageObject *message = [WBMessageObject message];
+    if (url != nil && ![url isEqualToString:@""]) {
+        message.mediaObject = [self getMessageWithTitle:title withDescription:description withThumbImgData:thumbImgData withUrl:url];
+    }
+    
+    WBAuthorizeRequest *authRequest = [WBAuthorizeRequest request];
+    authRequest.redirectURI = redirectURL;
+    authRequest.scope = @"all";
+    
+    WBSendMessageToWeiboRequest *request = [WBSendMessageToWeiboRequest requestWithMessage:message authInfo:authRequest access_token:accessToken];
+    request.userInfo = requestUserInfo;
+    [WeiboSDK sendRequest:request];
+}
+/**
+ 获取图片obj
+ */
+- (WBImageObject *)getMessageImg:(NSData *)imgData {
+    WBImageObject *image = [WBImageObject object];
+    image.imageData = imgData;
+    return image;
+}
+/**
+ 获取链接obj
+ */
+- (WBWebpageObject *)getMessageWithTitle:(NSString *)title withDescription:(NSString *)description withThumbImgData:(NSData *)thumbImgData withUrl:(NSString *)url {
+    WBWebpageObject *webpage = [WBWebpageObject object];
+    webpage.objectID = @"identifier1";
+    webpage.title = title;
+    webpage.description = description;
+    webpage.thumbnailData = thumbImgData;
+    webpage.webpageUrl = url;
+    return webpage;
+}
+#pragma mark WeiboSDKDelegate微博代理
+- (void)didReceiveWeiboResponse:(WBBaseResponse *)response {
+    if ([response isKindOfClass:WBAuthorizeResponse.class]) {
+        if (self.weiboAuthBlock == NULL || self.weiboAuthBlock == nil) {
+            return;
+        }
+        if (response.statusCode == WeiboSDKResponseStatusCodeSuccess) {
+            self.weiboAuthBlock(YES, response.userInfo, response.requestUserInfo);
+        } else {
+            self.weiboAuthBlock(NO, response.userInfo, response.requestUserInfo);
+        }
+        return;
+    } else if ([response isKindOfClass:WBSendMessageToWeiboResponse.class]) {
+        if (self.weiboShareBlock == NULL || self.weiboShareBlock == nil) {
+            return;
+        }
+        if (response.statusCode == 0) {
+            self.weiboShareBlock(YES, response.requestUserInfo);
+        } else {
+            self.weiboShareBlock(NO, response.requestUserInfo);
+        }
+        return;
+    }
+}
+- (void)didReceiveWeiboRequest:(WBBaseRequest *)request {
+    
+}
+#pragma mark 系统回调
 - (BOOL)HandleOpenURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     NSString *urlStr = url.absoluteString;
     if ([urlStr containsString:@"tencent"]) {
         return [TencentOAuth HandleOpenURL:url];
-    } else {
+    } else if ([[urlStr substringToIndex:2] isEqualToString:@"wx"]) {
         return [WXApi handleOpenURL:url delegate:self];
+    } else {
+        return [WeiboSDK handleOpenURL:url delegate:self];
     }
 }
 - (BOOL)HandleOpenURL:(NSURL *)url {
     NSString *urlStr = url.absoluteString;
     if ([urlStr containsString:@"tencent"]) {
         return [TencentOAuth HandleOpenURL:url];
-    } else {
+    } else if ([[urlStr substringToIndex:2] isEqualToString:@"wx"]) {
         return [WXApi handleOpenURL:url delegate:self];
+    } else {
+        return [WeiboSDK handleOpenURL:url delegate:self];
     }
 }
 

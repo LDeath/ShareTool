@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27A93FE81F18A67800132AB1 /* WeiboShareVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A93FE61F18A67800132AB1 /* WeiboShareVC.m */; };
+		27A93FE91F18A67800132AB1 /* WeiboShareVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A93FE71F18A67800132AB1 /* WeiboShareVC.xib */; };
+		27A93FEB1F18C24400132AB1 /* image_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27A93FEA1F18C24400132AB1 /* image_2.jpg */; };
 		27CA320B1F16F8EA007B3A9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CA320A1F16F8EA007B3A9B /* main.m */; };
 		27CA320E1F16F8EA007B3A9B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CA320D1F16F8EA007B3A9B /* AppDelegate.m */; };
 		27CA32111F16F8EA007B3A9B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CA32101F16F8EA007B3A9B /* ViewController.m */; };
@@ -41,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27A93FE51F18A67800132AB1 /* WeiboShareVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboShareVC.h; sourceTree = "<group>"; };
+		27A93FE61F18A67800132AB1 /* WeiboShareVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboShareVC.m; sourceTree = "<group>"; };
+		27A93FE71F18A67800132AB1 /* WeiboShareVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeiboShareVC.xib; sourceTree = "<group>"; };
+		27A93FEA1F18C24400132AB1 /* image_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_2.jpg; sourceTree = "<group>"; };
 		27CA32061F16F8EA007B3A9B /* ShareHelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareHelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CA320A1F16F8EA007B3A9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		27CA320C1F16F8EA007B3A9B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -193,6 +200,10 @@
 		27CA32421F170642007B3A9B /* SinaShare */ = {
 			isa = PBXGroup;
 			children = (
+				27A93FEA1F18C24400132AB1 /* image_2.jpg */,
+				27A93FE51F18A67800132AB1 /* WeiboShareVC.h */,
+				27A93FE61F18A67800132AB1 /* WeiboShareVC.m */,
+				27A93FE71F18A67800132AB1 /* WeiboShareVC.xib */,
 			);
 			path = SinaShare;
 			sourceTree = "<group>";
@@ -330,8 +341,10 @@
 				27CA325A1F176DD2007B3A9B /* WechatShareVC.xib in Resources */,
 				27CA32481F17066A007B3A9B /* QQShareVC.xib in Resources */,
 				27CA324A1F170C29007B3A9B /* news.jpg in Resources */,
+				27A93FE91F18A67800132AB1 /* WeiboShareVC.xib in Resources */,
 				27CA32191F16F8EA007B3A9B /* LaunchScreen.storyboard in Resources */,
 				27CA32161F16F8EA007B3A9B /* Assets.xcassets in Resources */,
+				27A93FEB1F18C24400132AB1 /* image_2.jpg in Resources */,
 				27CA32141F16F8EA007B3A9B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,6 +389,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ShareHelp/Pods-ShareHelp-resources.sh",
 				"${PODS_ROOT}/MAFShareTool/MAFShareTool/Tencent/TencentOpenApi_IOS_Bundle.bundle",
+				"${PODS_ROOT}/WeiboSDK/libWeiboSDK/WeiboSDK.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -416,6 +430,7 @@
 				27CA320E1F16F8EA007B3A9B /* AppDelegate.m in Sources */,
 				27CA32591F176DD2007B3A9B /* WechatShareVC.m in Sources */,
 				27CA320B1F16F8EA007B3A9B /* main.m in Sources */,
+				27A93FE81F18A67800132AB1 /* WeiboShareVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

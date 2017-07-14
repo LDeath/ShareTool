@@ -10,7 +10,7 @@
 #import "MAFShareTool.h"
 #import "QQShareVC.h"
 #import "WechatShareVC.h"
-
+#import "WeiboShareVC.h"
 
 @interface ViewController ()
 
@@ -35,6 +35,8 @@
     [self.navigationController pushViewController:wechatShareVC animated:YES];
 }
 - (IBAction)clickSinaShare:(id)sender {
+    WeiboShareVC *weiboShareVC = [[WeiboShareVC alloc] init];
+    [self.navigationController pushViewController:weiboShareVC animated:YES];
 }
 
 
