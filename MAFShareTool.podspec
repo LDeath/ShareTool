@@ -94,6 +94,6 @@ Pod::Spec.new do |s|
   s.frameworks = 'UIKit','Foundation','Security','SystemConfiguration','CoreGraphics','CoreTelephony'
   s.libraries = 'z','stdc++','sqlite3','iconv'
   s.dependency 'WechatOpenSDK'
-  s.dependency 'WeiboSDK', :git => "https://github.com/sinaweibosdk/weibo_ios_sdk.git" 
+  s.dependency 'WeiboSDK'
 
 end
