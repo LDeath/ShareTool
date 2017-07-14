@@ -10,8 +10,9 @@
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/QQApiInterface.h>
 #import <TencentOpenAPI/sdkdef.h>
+#import <WechatOpenSDK/WXApi.h>
 
-@interface MAFShareTool()<TencentSessionDelegate, TencentLoginDelegate>
+@interface MAFShareTool()<TencentSessionDelegate, TencentLoginDelegate, WXApiDelegate>
 
 @property (nonatomic, retain) TencentOAuth *tencentOAuth;
 
@@ -27,12 +28,24 @@ static id instance = nil;
     });
     return instance;
 }
-
+#pragma mark 初始化SDK
+/**
+ 初始化腾讯qqSDK
+ */
 - (void)initTencentSDKWithAppID:(NSString *)appID {
     self.tencentOAuth = [[TencentOAuth alloc] initWithAppId:appID andDelegate:self];
     self.tencentOAuth.redirectURI = @"";
 }
-
+/**
+ 初始化微信sdk
+ */
+- (void)initWechatSDKWithAppID:(NSString *)appID {
+    [WXApi registerApp:appID];
+}
+#pragma mark 腾讯qq
+/**
+ 腾讯qq发起授权
+ */
 - (void)qqLoginWithLoginBlock:(LoginBlock )loginBlock {
     self.loginBlock = loginBlock;
     NSArray* permissions = [NSArray arrayWithObjects:
@@ -43,6 +56,9 @@ static id instance = nil;
     self.tencentOAuth.authShareType = AuthShareType_QQ;
     [self.tencentOAuth authorize:permissions inSafari:NO];
 }
+/**
+ 获取授权后的信息
+ */
 - (void)qqGetInfoWithBlock:(GetInfoBlock )getInfoBlock {
     self.getInfoBlock = getInfoBlock;
     BOOL success = [self.tencentOAuth getUserInfo];
@@ -217,6 +233,24 @@ static id instance = nil;
         {
             break;
         }
+    }
+}
+#pragma mark 微信
+- (void)wechatLogin {
+    //构造SendAuthReq结构体
+    SendAuthReq* req =[[SendAuthReq alloc ] init];
+    req.scope = @"snsapi_userinfo"; //应用授权作用域，如获取用户个人信息则填写snsapi_userinfo
+    req.state = @"123" ;
+    //第三方向微信终端发送一个SendAuthReq消息结构
+    [WXApi sendReq:req];
+}
+#pragma mark 
+- (BOOL)HandleOpenURL:(NSURL *)url {
+    NSString *urlStr = url.absoluteString;
+    if ([urlStr containsString:@"tencent"]) {
+        return [TencentOAuth HandleOpenURL:url];
+    } else {
+        return [WXApi handleOpenURL:url delegate:self];
     }
 }
 

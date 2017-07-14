@@ -8,9 +8,10 @@
 
 #import "AppDelegate.h"
 #import <TencentOpenAPI/TencentOAuth.h>
+#import <WechatOpenSDK/WXApi.h>
 #import "MAFShareTool.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<WXApiDelegate>
 
 @end
 
@@ -20,16 +21,27 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     MAFShareTool *shareTool = [MAFShareTool sharedInstance];
-    [shareTool initTencentSDKWithAppID:@"1105311618"];
+    [shareTool initTencentSDKWithAppID:@"1105560052"];
+    [shareTool initWechatSDKWithAppID:@"wx25375b49093a863c"];
     return YES;
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
-    return [TencentOAuth HandleOpenURL:url];
+    NSString *urlStr = url.absoluteString;
+    if ([urlStr containsString:@"tencent"]) {
+        return [TencentOAuth HandleOpenURL:url];
+    } else {
+        return [WXApi handleOpenURL:url delegate:self];
+    }
 }
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
-    return [TencentOAuth HandleOpenURL:url];
+    NSString *urlStr = url.absoluteString;
+    if ([urlStr containsString:@"tencent"]) {
+        return [TencentOAuth HandleOpenURL:url];
+    } else {
+        return [WXApi handleOpenURL:url delegate:self];
+    }
 }
 
 

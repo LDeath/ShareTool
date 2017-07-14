@@ -26,17 +26,35 @@ typedef void (^GetInfoBlock)(int status, NSDictionary *info, NSString *erroMsg);
 @property (nonatomic, copy) GetInfoBlock getInfoBlock;
 
 + (MAFShareTool *)sharedInstance;
-
-- (void)qqLoginWithLoginBlock:(LoginBlock )loginBlock;
-
-- (void)qqGetInfoWithBlock:(GetInfoBlock )getInfoBlock;
-
+#pragma mark 初始化SDK
+/**
+ 初始化腾讯qqSDK
+ */
 - (void)initTencentSDKWithAppID:(NSString *)appID;
-
+/**
+ 初始化微信sdk
+ */
+- (void)initWechatSDKWithAppID:(NSString *)appID;
+#pragma mark 腾讯qq
+/**
+ 腾讯qq发起授权
+ */
+- (void)qqLoginWithLoginBlock:(LoginBlock )loginBlock;
+/**
+ 获取授权后的信息
+ */
+- (void)qqGetInfoWithBlock:(GetInfoBlock )getInfoBlock;
+/**
+ qq消息分享纯文本消息
+ */
 - (void)shareQQTextMessageWithText:(NSString *)text;
-
+/**
+ qq消息分享纯图片消息
+ */
 - (void)shareQQImageMessageWithImageData:(NSData *)data;
-
+/**
+ qq消息分享网络链接分享
+ */
 - (void)shareQQNetMessageWithUrl:(NSURL *)url andTitle:(NSString *)title andDescription:(NSString *)description andPreviewImageUrl:(NSURL *)previewImageUrl;
 /**
  qq空间纯文本分享
@@ -46,5 +64,7 @@ typedef void (^GetInfoBlock)(int status, NSDictionary *info, NSString *erroMsg);
  qq空间网络链接分享
  */
 - (void)shareQZoneNetMessageWithUrl:(NSURL *)url andTitle:(NSString *)title andDescription:(NSString *)description andPreviewImageUrl:(NSURL *)previewImageUrl;
+#pragma mark 微信
+#pragma mark 微博
 
 @end

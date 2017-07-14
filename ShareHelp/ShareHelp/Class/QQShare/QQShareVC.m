@@ -28,6 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.title = @"qq分享与登录";
 }
 
 #pragma mark UITableViewDelegate

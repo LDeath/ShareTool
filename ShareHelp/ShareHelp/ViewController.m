@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "MAFShareTool.h"
 #import "QQShareVC.h"
+#import "WechatShareVC.h"
+
 
 @interface ViewController ()
 
@@ -25,10 +27,12 @@
 - (IBAction)clickQQShare:(id)sender {
     
     QQShareVC *qqShareVC = [[QQShareVC alloc] init];
-    [self presentViewController:qqShareVC animated:YES completion:nil];
+    [self.navigationController pushViewController:qqShareVC animated:YES];
     
 }
 - (IBAction)clickWechatShare:(id)sender {
+    WechatShareVC *wechatShareVC = [[WechatShareVC alloc] init];
+    [self.navigationController pushViewController:wechatShareVC animated:YES];
 }
 - (IBAction)clickSinaShare:(id)sender {
 }

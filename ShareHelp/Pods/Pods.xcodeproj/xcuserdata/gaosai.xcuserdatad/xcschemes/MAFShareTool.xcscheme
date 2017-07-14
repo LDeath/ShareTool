@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'AFEF21D55F7C3665D6DA3C0C123ACF7F'
+               BlueprintIdentifier = 'E3D8AF7D82ED60ADF037DBFD9F8B5380'
                BlueprintName = 'MAFShareTool'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libMAFShareTool.a'>

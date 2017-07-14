@@ -18,6 +18,8 @@
 		27CA32471F17066A007B3A9B /* QQShareVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CA32451F17066A007B3A9B /* QQShareVC.m */; };
 		27CA32481F17066A007B3A9B /* QQShareVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CA32461F17066A007B3A9B /* QQShareVC.xib */; };
 		27CA324A1F170C29007B3A9B /* news.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27CA32491F170C29007B3A9B /* news.jpg */; };
+		27CA32591F176DD2007B3A9B /* WechatShareVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CA32571F176DD2007B3A9B /* WechatShareVC.m */; };
+		27CA325A1F176DD2007B3A9B /* WechatShareVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CA32581F176DD2007B3A9B /* WechatShareVC.xib */; };
 		F3AA3FD92FFB7B4BBF0670BD /* libPods-ShareHelp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABD5351D5F1A2E452518AF4A /* libPods-ShareHelp.a */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,9 @@
 		27CA32451F17066A007B3A9B /* QQShareVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQShareVC.m; sourceTree = "<group>"; };
 		27CA32461F17066A007B3A9B /* QQShareVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QQShareVC.xib; sourceTree = "<group>"; };
 		27CA32491F170C29007B3A9B /* news.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = news.jpg; sourceTree = "<group>"; };
+		27CA32561F176DD2007B3A9B /* WechatShareVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatShareVC.h; sourceTree = "<group>"; };
+		27CA32571F176DD2007B3A9B /* WechatShareVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WechatShareVC.m; sourceTree = "<group>"; };
+		27CA32581F176DD2007B3A9B /* WechatShareVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WechatShareVC.xib; sourceTree = "<group>"; };
 		4D1AA72086EDA34158A29457 /* Pods-ShareHelp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareHelp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShareHelp/Pods-ShareHelp.release.xcconfig"; sourceTree = "<group>"; };
 		68C822314958620D6693E47C /* Pods-ShareHelp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareHelp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShareHelp/Pods-ShareHelp.debug.xcconfig"; sourceTree = "<group>"; };
 		ABD5351D5F1A2E452518AF4A /* libPods-ShareHelp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShareHelp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,6 +200,9 @@
 		27CA32431F170642007B3A9B /* WechatShare */ = {
 			isa = PBXGroup;
 			children = (
+				27CA32561F176DD2007B3A9B /* WechatShareVC.h */,
+				27CA32571F176DD2007B3A9B /* WechatShareVC.m */,
+				27CA32581F176DD2007B3A9B /* WechatShareVC.xib */,
 			);
 			path = WechatShare;
 			sourceTree = "<group>";
@@ -277,8 +285,7 @@
 				TargetAttributes = {
 					27CA32051F16F8EA007B3A9B = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = R9DHB48999;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					27CA321E1F16F8EA007B3A9B = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -319,6 +326,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27CA325A1F176DD2007B3A9B /* WechatShareVC.xib in Resources */,
 				27CA32481F17066A007B3A9B /* QQShareVC.xib in Resources */,
 				27CA324A1F170C29007B3A9B /* news.jpg in Resources */,
 				27CA32191F16F8EA007B3A9B /* LaunchScreen.storyboard in Resources */,
@@ -405,6 +413,7 @@
 				27CA32471F17066A007B3A9B /* QQShareVC.m in Sources */,
 				27CA32111F16F8EA007B3A9B /* ViewController.m in Sources */,
 				27CA320E1F16F8EA007B3A9B /* AppDelegate.m in Sources */,
+				27CA32591F176DD2007B3A9B /* WechatShareVC.m in Sources */,
 				27CA320B1F16F8EA007B3A9B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -557,12 +566,16 @@
 			baseConfigurationReference = 68C822314958620D6693E47C /* Pods-ShareHelp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = R9DHB48999;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ran An (39V6J232P2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ran An (39V6J232P2)";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ShareHelp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = CTNQ.ShareHelp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alltosun.DDB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "98f99ef5-5eaf-4d55-acc5-23010416c342";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -571,12 +584,16 @@
 			baseConfigurationReference = 4D1AA72086EDA34158A29457 /* Pods-ShareHelp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = R9DHB48999;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ran An (39V6J232P2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ran An (39V6J232P2)";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ShareHelp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = CTNQ.ShareHelp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alltosun.DDB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "98f99ef5-5eaf-4d55-acc5-23010416c342";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

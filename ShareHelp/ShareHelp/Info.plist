@@ -27,7 +27,7 @@
 			<string>tencent</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>tencent1105311618</string>
+				<string>tencent1105560052</string>
 			</array>
 		</dict>
 		<dict>
@@ -37,7 +37,17 @@
 			<string>mqqapi</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>QQ41e1b782</string>
+				<string>QQ41e581f4</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>weixin</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>wx25375b49093a863c</string>
 			</array>
 		</dict>
 	</array>
