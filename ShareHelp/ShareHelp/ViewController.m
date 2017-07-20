@@ -14,6 +14,11 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UIButton *qqBtn;
+@property (weak, nonatomic) IBOutlet UIButton *wxBtn;
+@property (weak, nonatomic) IBOutlet UIButton *wbBtn;
+
+
 @end
 
 @implementation ViewController
@@ -21,7 +26,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
     
 }
 - (IBAction)clickQQShare:(id)sender {
@@ -38,6 +42,7 @@
     WeiboShareVC *weiboShareVC = [[WeiboShareVC alloc] init];
     [self.navigationController pushViewController:weiboShareVC animated:YES];
 }
+
 
 
 - (void)didReceiveMemoryWarning {

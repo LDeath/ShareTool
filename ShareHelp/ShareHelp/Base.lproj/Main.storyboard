@@ -58,6 +58,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="MXj-Ih-Pca"/>
+                    <connections>
+                        <outlet property="qqBtn" destination="qbH-0s-omy" id="C6T-gf-xeo"/>
+                        <outlet property="wbBtn" destination="nCG-je-Yg1" id="Ayd-A7-FD1"/>
+                        <outlet property="wxBtn" destination="lfH-NT-why" id="ooo-cM-75e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
