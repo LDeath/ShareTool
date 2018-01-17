@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MAFShareTool"
-  s.version      = "0.1.3"
+  s.version      = "0.1.4"
   s.summary      = "常用分享封装"
 
   # This description is used to generate tags and improve search results.
@@ -88,8 +88,8 @@ Pod::Spec.new do |s|
 
   s.source_files  = 'MAFShareTool/**/MAFShareTool.{h,m}'
 
-  s.resource     = 'MAFShareTool/Tencent/TencentOpenApi_IOS_Bundle.bundle'
-  s.ios.vendored_frameworks = 'MAFShareTool/Tencent/TencentOpenAPI.framework'
+  s.resource     = 'MAFShareTool/Tencent/TencentOpenApi_IOS_Bundle.bundle','MAFShareTool/Test/FrameworkTestBundle.bundle'
+  s.ios.vendored_frameworks = 'MAFShareTool/Tencent/TencentOpenAPI.framework','MAFShareTool/Test/FrameworkTest.framework'
 
   s.frameworks = 'UIKit','Foundation','Security','SystemConfiguration','CoreGraphics','CoreTelephony'
   s.libraries = 'z','stdc++','sqlite3','iconv'
